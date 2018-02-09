@@ -2,11 +2,13 @@
 A simple linux shell
 
 ## Installation
-A makefile is provided. Cd to download directory and type "make"
+A makefile is provided. 
 
-`cd /Downloads/eggShell`
+Cd to download directory and type "make"
 
-`make`
+`>cd /Downloads/eggShell`
+
+`>make`
 
 ## Usage
 
@@ -14,12 +16,12 @@ A makefile is provided. Cd to download directory and type "make"
 
 cd to install directory and type:
 
-`./eggShell`
+`>./eggShell`
 
 The shell will start. Insert commands and press enter.
 If you want to quit, insert:
 
-`quit`
+`>quit`
 
 
 
@@ -28,8 +30,7 @@ If you want to quit, insert:
 cd to install directory and type:
 
 ```
-./eggShell *batchfile*
+.>/eggShell *batchfile*
 ```
-
 
 The shell will run the commands in the provided file and then exit.
