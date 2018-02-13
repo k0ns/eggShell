@@ -8,8 +8,8 @@
 //MAX ARRAY SIZES
 #define MAX_LINE_LENGTH 513
 #define MAX_ARG_LENGTH	8
-#define MAX_ARG_NO		16
-#define MAX_COM_NO		32
+#define MAX_ARG_NO	16
+#define MAX_COM_NO	32
 #define MAX_COM_LENGTH	MAX_ARG_NO*MAX_ARG_LENGTH
 
 
@@ -32,7 +32,7 @@ int main(int argc, char **argv){
 	}
 	else{
 		printf("Too many arguments.\nExiting...\n");
-		printf("For Interactive Mode : No arguments needed\nFor Batch mode : 1 argument specifying batch file path");
+		printf("For Interactive Mode : No arguments needed\nFor Batch mode : 1 argument specifying batch file path\n");
 		exit(1);
 	}
 	
@@ -161,7 +161,6 @@ void parse_line(char *line,int *delim,char **commands){
 	free(dup);
 }
 
-//DEFINE VALUES FOR EMPTY COMMAND, OR 'QUIT' COMMAND
 #define QUIT 1
 #define EMPTY 2
 int parse_command(char *command, char **args){
@@ -191,9 +190,13 @@ int parse_command(char *command, char **args){
 	}
 }
 
+
+
+
 /*CENTRAL FUNCTION
 
 INPUT = LINE
+
 
 1. PARSE LINE
 2. PARSE COMMANDS IN LINE
