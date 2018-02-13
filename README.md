@@ -4,7 +4,7 @@ A simple linux shell
 ## Installation
 A makefile is provided. 
 
-Cd to download directory and type "make"
+cd to download directory and type "make"
 
 `>cd /Downloads/eggShell`
 
@@ -19,6 +19,7 @@ cd to install directory and type:
 `>./eggShell`
 
 The shell will start. Insert commands and press enter.
+
 If you want to quit, insert:
 
 `>quit`
