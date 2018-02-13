@@ -6,7 +6,7 @@ A makefile is provided.
 
 cd to download directory and type "make"
 
-`>cd /Downloads/eggShell`
+`>cd /Downloads/eggShell-master`
 
 `>make`
 
