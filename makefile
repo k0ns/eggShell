@@ -1,7 +1,7 @@
 CC = gcc
 
 all: eggShell.c 
-	gcc eggShell.c -o eggShell
+	gcc -Wall eggShell.c -o eggShell
 
 clean: 
 	$(RM) eggShell
