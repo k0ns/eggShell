@@ -82,14 +82,19 @@ void batch(char **argv){
 		printf("Error Opening File\nExiting...\n");
 		exit(1);
 	}
+	int fd = fileno(fp);
+	off_t pos;
 
 	int quit;	
 	printf("\n\nSTARTING BATCH JOB\n\n");
 	//READ AND EXECUTE LINE BY LINE
 	//STOP WHEN NO MORE LINES OR QUIT RETURNED BY EGG
+	//SAVE POSITION IN FILE AND RESET AFTER EACH EXECUTION - FORKING MESSES UP FILE POINTER
 	do{
 		if(fgets(line,MAX_LINE_LENGTH,fp) == NULL)		break;
+		pos = lseek(fd,0,SEEK_CUR);
 		quit = egg(line);
+		lseek(fd,pos,SEEK_SET);
 	}while(!quit);
 	printf("\n\nJOB FINISHED. GOOD BYE...\n\n");
 	
